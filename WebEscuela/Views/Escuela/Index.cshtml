@@ -1,0 +1,55 @@
+﻿@model WebEscuela.Models.Escuela
+
+@{
+    ViewData["Title"] = "Escuela";
+}
+
+<h2>Escuela</h2>
+
+<div>
+    <h4>Escuela</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UniqueId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnioCreacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnioCreacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEscuela)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoEscuela)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pais)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

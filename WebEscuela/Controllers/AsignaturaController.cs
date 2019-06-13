@@ -10,6 +10,13 @@ namespace WebEscuela.Controllers
 {
     public class AsignaturaController : Controller
     {
+        List<Asignatura> ListaAsignaturas = new List<Asignatura>(){
+                    new Asignatura{Nombre = "Matemáticas"},
+                    new Asignatura{Nombre = "Educación Física"},
+                    new Asignatura{Nombre = "Castellano"},
+                    new Asignatura{Nombre = "Ciencias Naturales"}
+                };
+
         // GET: Asignatura
         public ActionResult Index()
         {
@@ -19,19 +26,19 @@ namespace WebEscuela.Controllers
         // GET: Asignatura
         public ActionResult Lista()
         {
-            List<Asignatura> ListaAsignaturas = new List<Asignatura>(){
-                    new Asignatura{Nombre = "Matemáticas"},
-                    new Asignatura{Nombre = "Educación Física"},
-                    new Asignatura{Nombre = "Castellano"},
-                    new Asignatura{Nombre = "Ciencias Naturales"}
-                };
+            //List<Asignatura> ListaAsignaturas = new List<Asignatura>(){
+            //        new Asignatura{Nombre = "Matemáticas"},
+            //        new Asignatura{Nombre = "Educación Física"},
+            //        new Asignatura{Nombre = "Castellano"},
+            //        new Asignatura{Nombre = "Ciencias Naturales"}
+            //    };
             return View(ListaAsignaturas);
         }
 
         // GET: Asignatura/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            return View(ListaAsignaturas.Find( a => a.UniqueId == id));
         }
 
         // GET: Asignatura/Create
